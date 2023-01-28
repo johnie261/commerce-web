@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+$orange : #ffa500;
+$blue : #0984e3;
+$black : #333;
+$white : #fff;
+$gold : gold;
+$light-color : #666;
+$light-bg : #eee;
+$border : 0.2rem solid $black;
+$box-shadow : 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+/*
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
+}
+*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: $light-bg;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 9%;
+
+  .logo {
+    color: $white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+    i {
+      color: $blue;
+    }
+  }
+
+  .search-form {
+    border-radius: 5rem;
+    height: 5rem;
+    width: 50rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    background: $white;
+
+    input {
+      width: 100%;
+      padding-right: 1rem;
+      font-size: 1.7rem;
+      color: $light-color;
+      text-transform: none;
+    }
+
+    label {
+      font-size: 2rem;
+      color: $light-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .icons a,
+  .icons div {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+#search-btn {
+  display: none;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  background: $white;
+  width: 30rem;
+  height: 100vh;
+  z-index: 10000;
+
+  &.active {
+    left: 0;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  }
+
+  #close-side-bar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 4rem;
+    color: $light-color;
+
+    &:hover {
+      transform: rotate(90deg);
+      color: $orange;
+    }
+  }
+
+  .user {
+    background: $light-bg;
+    padding: 2rem;
+    text-align: center;
+
+    img {
+      height: 17rem;
+      width: 17rem;
+      border-radius: 50%;
+      border: 1px solid $white;
+      box-shadow: $box-shadow;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      padding: 0.3rem 0;
+      color: $light-color;
+      font-size: 1.7rem;
+    }
+
+    .logout {
+      color: $orange;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 2rem;
+
+    .links {
+      display: block;
+      padding: 1rem 0;
+      font-size: 1.7rem;
+      color: $light-color;
+
+      &:hover {
+        color: $orange;
+        letter-spacing: 0.3rem;
+      }
+
+      i {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+//media queries
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #search-btn {
+    display: inline-block;
+  }
+
+  .header {
+    .search-form {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: $box-shadow;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    justify-content: center;
+
+    .logo {
+      display: none;
+    }
+  }
+
+  .icons a,
+  .icons div {
+    margin: 0 0.7rem;
+  }
+}
