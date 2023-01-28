@@ -28,6 +28,10 @@ body {
   background: #eee;
 }
 
+section {
+  padding: 3rem 9%;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -174,13 +178,94 @@ body {
   padding-right: 0.5rem;
 }
 
+.footer-1 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #333;
+  justify-content: space-between;
+}
+
+.footer-1 .logo {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+.footer-1 .logo .fa-store {
+  color: #0984e3;
+}
+
+.footer-1 .link .page {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.footer-1 .link .page:hover {
+  color: #0984e3;
+  letter-spacing: 0.2rem;
+}
+
+.footer-1 .share #icon {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-left: 1.5rem;
+}
+
+.footer-1 .share #icon:hover {
+  color: #0984e3;
+}
+
+.footer-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: #fff;
+}
+
+.footer-2 .partners {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-bottom: 1.5rem;
+}
+
+.footer-2 .copyright {
+  font-size: 2rem;
+  color: #666;
+}
+
+.footer-2 .copyright span {
+  color: orange;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 55%;
   }
 
+  section {
+    padding: 3rem 2rem;
+  }
+
   .header {
     padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer-1 {
+    flex-flow: column;
+  }
+
+  .footer-1 .link {
+    padding: 0 1rem;
+  }
+
+  .footer-2 {
+    text-align: center;
   }
 }
 
@@ -205,6 +290,13 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
+  .footer-1 .link .page {
+    display: block;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -213,15 +305,15 @@ body {
   }
 
   .header {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .header .logo {
-    display: none;
+    font-size: 2rem;
   }
 
   .icons a,
   .icons div {
-    margin: 0 0.7rem;
+    font-size: 2rem;
   }
 }
