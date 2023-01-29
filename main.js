@@ -18,3 +18,12 @@ window.onscroll = () => {
   SideBar.classList.remove('active');
   Search.classList.remove('active');
 };
+
+const swiper = new Swiper('.home-slider', {
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

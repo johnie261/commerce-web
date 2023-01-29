@@ -32,6 +32,22 @@ section {
   padding: 3rem 9%;
 }
 
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #ffa500;
+  color: #fff;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: 0.2rem;
+  background: #333;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -178,6 +194,46 @@ section {
   padding-right: 0.5rem;
 }
 
+.home {
+  background: #fff;
+}
+
+.home #arrow::after {
+  color: #ffa500;
+  font-size: 3rem;
+}
+
+.home .slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  min-height: 55rem;
+}
+
+.home .slide .image {
+  flex: 1 1 42rem;
+  text-align: center;
+}
+
+.home .slide .image img {
+  height: 30rem;
+}
+
+.home .slide .content {
+  flex: 1 1 42rem;
+}
+
+.home .slide .content span {
+  font-size: 2rem;
+  color: #ffa500;
+}
+
+.home .slide .content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+
 .footer-1 {
   display: flex;
   align-items: center;
@@ -237,7 +293,7 @@ section {
   color: #666;
 }
 
-.footer-2 .copyright span {
+.footer-2 .copyright .offer {
   color: orange;
 }
 
@@ -297,6 +353,10 @@ section {
     text-align: center;
     padding: 1rem 0;
   }
+
+  .home .slide {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -315,5 +375,14 @@ section {
   .icons a,
   .icons div {
     font-size: 2rem;
+  }
+
+  #arrow {
+    display: none;
+  }
+
+  .home .slide .image img {
+    height: auto;
+    width: 100%;
   }
 }
