@@ -42,18 +42,18 @@ section {
   padding: 3rem 9%;
 }
 
-.btn{
+.btn {
   margin-top: 1rem;
   display: inline-block;
   background: $orange;
   color: $white;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 
-  &:hover{
-    letter-spacing: .2rem;
+  &:hover {
+    letter-spacing: 0.2rem;
     background: $black;
   }
 }
@@ -202,39 +202,39 @@ section {
   }
 }
 
-.home{
+.home {
   background: $white;
 
-  #arrow::after{
+  #arrow::after {
     color: $orange;
     font-size: 3rem;
   }
 
-  .slide{
+  .slide {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
     min-height: 55rem;
-    padding-left: 2rem 0;
 
-    .image{
+    .image {
       flex: 1 1 42rem;
       text-align: center;
 
-      img{
+      img {
         height: 30rem;
       }
     }
-    .content{
+
+    .content {
       flex: 1 1 42rem;
 
-      span{
+      span {
         font-size: 2rem;
         color: $orange;
       }
 
-      h3{
+      h3 {
         font-size: 3rem;
         color: $black;
       }
@@ -303,12 +303,11 @@ section {
     font-size: 2rem;
     color: $light-color;
 
-    span {
+    .offer {
       color: orange;
     }
   }
 }
-
 
 //media queries
 
@@ -373,8 +372,8 @@ section {
     }
   }
 
-  .home{
-    .slide{
+  .home {
+    .slide {
       text-align: center;
     }
   }
@@ -398,14 +397,14 @@ section {
     font-size: 2rem;
   }
 
-  #arrow{
+  #arrow {
     display: none;
   }
 
-  .home{
-    .slide{
-      .image{
-        img{
+  .home {
+    .slide {
+      .image {
+        img {
           height: auto;
           width: 100%;
         }

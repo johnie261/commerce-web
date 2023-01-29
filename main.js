@@ -19,12 +19,11 @@ window.onscroll = () => {
   Search.classList.remove('active');
 };
 
-
-var swiper = new Swiper(".home-slider", {
-  loop:true,
-  grabCursor:true,
+const swiper = new Swiper('.home-slider', {
+  loop: true,
+  grabCursor: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
